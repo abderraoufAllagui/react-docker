@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps: 
@@ -38,3 +38,16 @@ jobs:
         tags: v1, latest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+
+  deployment:
+    name : Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name:  testing my server conx ssh
+        uses : appleboy/ssh-action@master
+        with:
+          host: 102.219.179.94
+          username: root
+          password: @q94M7bI4*v@
+          port: 22
+          script: cd ../var
