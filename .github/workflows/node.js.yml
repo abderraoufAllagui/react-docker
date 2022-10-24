@@ -27,10 +27,9 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: npm run build --if-present
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@main
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: YOUR-PROJECT-FTP-HOST
+        server: 102.219.179.94
         username: root
         password: ${{ secrets.HOST_PASSWORD }}
-        server-dir: YOUR-PROJECT-FTP-DIRECTORY
