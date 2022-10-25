@@ -31,8 +31,8 @@ jobs:
         PORT: ${{ secrets.HOST_PORT }}
         KEY: ${{ secrets.SSHKEYY }}
       with:
-        source: "./build/."
-        target: "/var/www/html"
+        source: "./build"
+        target: "/var/www"
 
     - name: Executing remote command
       uses: appleboy/ssh-action@master
