@@ -16,7 +16,7 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.HOST_USERNAME }}
         PORT: ${{ secrets.HOST_PORT }}
-        KEY: ${{ secrets.SSHKEY }}
+        KEY: ${{ secrets.SSHKEYY }}
       with:
         source: "."
         target: "/var/www/html"
@@ -27,5 +27,5 @@ jobs:
         host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.HOST_USERNAME }}
         PORT: ${{ secrets.HOST_PORT }}
-        KEY: ${{ secrets.SSHKEY }}
+        KEY: ${{ secrets.SSHKEYY }}
         script: ls
