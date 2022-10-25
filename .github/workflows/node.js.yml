@@ -18,7 +18,7 @@ jobs:
         PORT: ${{ secrets.HOST_PORT }}
         KEY: ${{ secrets.SSHKEYY }}
       with:
-        source: "./build/."
+        source: "build/."
         target: "/var/www/html"
 
     - name: Executing remote command
